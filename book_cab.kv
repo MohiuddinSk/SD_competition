@@ -1,0 +1,39 @@
+<BookCabScreen>:
+    pickup_input: pickup_input
+    drop_input: drop_input
+    time_input: time_input
+    cab_input: cab_input
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 40
+        spacing: 15
+
+        Label:
+            text: "🚖 Book a Cab"
+            font_size: 24
+            bold: True
+
+        TextInput:
+            id: pickup_input
+            hint_text: "Pickup Location"
+
+        TextInput:
+            id: drop_input
+            hint_text: "Drop Location"
+
+        TextInput:
+            id: time_input
+            hint_text: "Pickup Time (YYYY-MM-DD HH:MM:SS)"
+
+        TextInput:
+            id: cab_input
+            hint_text: "Cab Type (Sedan/SUV)"
+
+        Button:
+            text: "Submit Booking"
+            on_press: root.submit_booking()
+
+        Button:
+            text: "Back"
+            on_press: app.root.current = 'dashboard'

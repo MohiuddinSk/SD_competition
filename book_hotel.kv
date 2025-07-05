@@ -1,0 +1,44 @@
+<BookHotelScreen>:
+    city_input: city_input
+    checkin_input: checkin_input
+    checkout_input: checkout_input
+    guests_input: guests_input
+    room_input: room_input
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 40
+        spacing: 15
+
+        Label:
+            text: "🏨 Book Hotel"
+            font_size: 24
+            bold: True
+
+        TextInput:
+            id: city_input
+            hint_text: "City"
+
+        TextInput:
+            id: checkin_input
+            hint_text: "Check-in Date (YYYY-MM-DD)"
+
+        TextInput:
+            id: checkout_input
+            hint_text: "Check-out Date (YYYY-MM-DD)"
+
+        TextInput:
+            id: guests_input
+            hint_text: "Number of Guests"
+
+        TextInput:
+            id: room_input
+            hint_text: "Room Type (Standard/Deluxe)"
+
+        Button:
+            text: "Submit Booking"
+            on_press: root.submit_booking()
+
+        Button:
+            text: "Back"
+            on_press: app.root.current = 'dashboard'

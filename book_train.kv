@@ -1,0 +1,44 @@
+<BookTrainScreen>:
+    from_input: from_input
+    to_input: to_input
+    date_input: date_input
+    class_input: class_input
+    seats_input: seats_input
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 40
+        spacing: 15
+
+        Label:
+            text: "🚆 Book Train Ticket"
+            font_size: 24
+            bold: True
+
+        TextInput:
+            id: from_input
+            hint_text: "From Station"
+
+        TextInput:
+            id: to_input
+            hint_text: "To Station"
+
+        TextInput:
+            id: date_input
+            hint_text: "Journey Date (YYYY-MM-DD)"
+
+        TextInput:
+            id: class_input
+            hint_text: "Class (Sleeper/AC)"
+
+        TextInput:
+            id: seats_input
+            hint_text: "Number of Seats"
+
+        Button:
+            text: "Submit Booking"
+            on_press: root.submit_booking()
+
+        Button:
+            text: "Back"
+            on_press: app.root.current = 'dashboard'

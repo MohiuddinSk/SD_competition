@@ -1,0 +1,39 @@
+<BookBusScreen>:
+    from_input: from_input
+    to_input: to_input
+    date_input: date_input
+    seats_input: seats_input
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 40
+        spacing: 15
+
+        Label:
+            text: "🚌 Book Bus Ticket"
+            font_size: 24
+            bold: True
+
+        TextInput:
+            id: from_input
+            hint_text: "From City"
+
+        TextInput:
+            id: to_input
+            hint_text: "To City"
+
+        TextInput:
+            id: date_input
+            hint_text: "Journey Date (YYYY-MM-DD)"
+
+        TextInput:
+            id: seats_input
+            hint_text: "Number of Seats"
+
+        Button:
+            text: "Submit Booking"
+            on_press: root.submit_booking()
+
+        Button:
+            text: "Back"
+            on_press: app.root.current = 'dashboard'

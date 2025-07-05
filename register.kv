@@ -1,0 +1,40 @@
+<RegisterScreen>:
+    name_input: name
+    email_input: email
+    password_input: password
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 40
+        spacing: 20
+
+        Label:
+            text: "TravelEase - Register"
+            font_size: 28
+            color: 0, 0.6, 0.4, 1
+
+        TextInput:
+            id: name
+            hint_text: "Name"
+            multiline: False
+
+        TextInput:
+            id: email
+            hint_text: "Email"
+            multiline: False
+
+        TextInput:
+            id: password
+            hint_text: "Password"
+            multiline: False
+            password: True
+
+        Button:
+            text: "Register"
+            on_press: root.register()
+            background_color: 0, 0.7, 0.3, 1
+
+        Button:
+            text: "Back to Login"
+            on_press: root.go_to_login()
+            background_color: 0.2, 0.5, 1, 1
